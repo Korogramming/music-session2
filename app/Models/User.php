@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    //update_at, created_atがないため、以下を無効にする
+    public $timestamps = false;
+
+    
 }

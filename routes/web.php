@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController; //外部にあるPostControllerクラスを使えるようにする。
+
+//Route::get('/posts')
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
