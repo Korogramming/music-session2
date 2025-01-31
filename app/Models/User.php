@@ -46,5 +46,31 @@ class User extends Authenticatable
     //update_at, created_atがないため、以下を無効にする
     public $timestamps = false;
 
+    //PostVideoに対するリレーション[1対多]で複数形(post_videos()のところ)
+    public function post_videos()
+    {
+        return $this->hasMany(PostVideo::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
+
+    public function applications(){
+        return $this->hasMany(Application::class);
+    }
+
+    public function chats(){
+        return $this->hasMany(Chat::class);
+    }
+
+    public function messages(){
+        return $this->hasMany(Message::class);
+    }
     
 }
